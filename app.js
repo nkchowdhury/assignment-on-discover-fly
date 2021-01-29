@@ -1,27 +1,83 @@
-document.getElementById('ticket-incrase').addEventListener('click',function(){
+// first-class ticket handler
 
-    handleTricketChange(true)
+ document.getElementById('first-ticket-incrase').addEventListener('click',function(){
+
+    firstTicketChange(true)
+    
+    // const firstTicketInput = document.getElementById('first-ticket-count');
+    // const firstTicketCount = parseInt(firstTicketInput.value);
+    // const firstTicketNewCount = firstTicketCount + 1;
+    // firstTicketInput.value = firstTicketNewCount;
+    // const firstTicketTotal = firstTicketNewCount * 150;
+
 
 })
 
-document.getElementById('ticket-decrase').addEventListener('click', function(){
-    handleTricketChange(false)
+
+document.getElementById('first-ticket-decrase').addEventListener('click',function(){
+
+    firstTicketChange(false)
+    
+    // const firstTicketInput = document.getElementById('first-ticket-count');
+    // const firstTicketCount = parseInt(firstTicketInput.value);
+    // const firstTicketNewCount = firstTicketCount - 1;
+    // firstTicketInput.value = firstTicketNewCount;
+    // const firstTicketTotal = firstTicketNewCount * 150;
+
 
 })
 
-function handleTricketChange(isIncrase){
+function firstTicketChange(isIncrase){
 
-    const ticketInput = document.getElementById('ticket-count');
-    const ticketCount = parseInt(ticketInput.value);
-    let ticketNewCount = ticketCount;
+    const firstTicketInput = document.getElementById('first-ticket-count');
+    const firstTicketCount = parseInt(firstTicketInput.value);
+   
+    let firstTicketNewCount = firstTicketCount;
     if(isIncrase == true ){
-        ticketNewCount = ticketCount + 1;
+        firstTicketNewCount = firstTicketCount + 1;
+
     }
-    if(isIncrase == false && ticketCount > 0){
-    ticketNewCount = ticketCount - 1;
+    if(isIncrase == false && firstTicketCount >0 ){
+        firstTicketNewCount = firstTicketCount - 1;
+
     }
-    ticketInput.value = ticketNewCount;
-    const ticketTotal = ticketNewCount * 100;
+    firstTicketInput.value = firstTicketNewCount;
+    const firstTicketTotal = firstTicketNewCount * 150;
+
+
+}
+
+
+
+
+
+
+
+//economy ticket handler
+document.getElementById('economy-ticket-incrase').addEventListener('click',function(){
+
+    economyTricketChange(true)
+
+})
+
+document.getElementById('economy-ticket-decrase').addEventListener('click', function(){
+    economyTricketChange(false)
+
+})
+
+function economyTricketChange(isIncrase){
+
+    const economyTicketInput = document.getElementById('economy-ticket-count');
+    const economyTicketCount = parseInt(economyTicketInput.value);
+    let economyTicketNewCount = economyTicketCount;
+    if(isIncrase == true ){
+        economyTicketNewCount = economyTicketCount + 1;
+    }
+    if(isIncrase == false && economyTicketCount > 0){
+    economyTicketNewCount = economyTicketCount - 1;
+    }
+    economyTicketInput.value = economyTicketNewCount;
+    const economyTicketTotal = economyTicketNewCount * 100;
 }
 
 
